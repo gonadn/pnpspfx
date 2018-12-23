@@ -1,0 +1,17 @@
+{
+  "@pnp/generator-spfx": {
+    "framework": "none",
+    "pnpFramework": "angularelements",
+    "pnp-libraries": [
+      "jquery@3",
+      "@pnp/pnpjs"
+    ]
+  },
+  "@microsoft/generator-sharepoint": {
+    "solutionName": "pnpspfx-spfx",
+    "framework": "none",
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "whichFolder": "subdir"
+  }
+}
