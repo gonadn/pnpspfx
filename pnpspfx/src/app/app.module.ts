@@ -3,13 +3,15 @@ import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
 import { PnpspfxWebPartComponent } from './pnpspfx-web-part/pnpspfx-web-part.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     PnpspfxWebPartComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   entryComponents: [PnpspfxWebPartComponent]
