@@ -4,15 +4,14 @@
       <li *ngFor="let topic of topics">{{topic}}</li>
     </ul>
   <ul>
-    <li *ngFor="let d of lstItems;">
+    <li *ngFor="let d of lstItems1;">
         {{d.Title}}
     </li>
   </ul>
   <hr/>
   <h2>Dynamic data (PnP)  SP List</h2>
-  <p>{{lstItems}}</p>
   <mat-list role="list" >
-    <mat-list-item *ngFor="let d of lstItems;" role="listitem">
+    <mat-list-item *ngFor="let d of lstItems2;" role="listitem">
        <h1>{{d.Title}}</h1>
     </mat-list-item>
   </mat-list>

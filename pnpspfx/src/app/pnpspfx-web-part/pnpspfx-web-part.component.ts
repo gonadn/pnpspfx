@@ -18,7 +18,8 @@ export interface ISPList{
 export class PnpspfxWebPartComponent implements OnInit {
   @Input() description: string;
   //lstItems: any[] = [];
-  lstItems: Array<any> = [];
+  lstItems1: Array<any> = [];
+  lstItems2: Array<any> = [];
   //lstItems = [];
   public test: string = "test string....";
   topics: string[] = ['C','C#','Angular','Angular Element'];
@@ -27,17 +28,9 @@ export class PnpspfxWebPartComponent implements OnInit {
   ngOnInit() {
   }
 
-  private getlistData(): Observable<ISPList>{
-    var itms;
-    this.baseSrv.getlistData_().then((data)=>{
-      itms = data;
-    });
-    return itms;
-  }
-
-  private _getlistData(){
+  private getlistData1(){
     var promise = new Promise((resolve, reject) => {
-      this.baseSrv.getlistData().then((data:any)=>{
+      this.baseSrv.getlistData1().then((data:any)=>{
         if(data!==null&&data!==undefined){
           resolve(data);
         }
@@ -47,5 +40,13 @@ export class PnpspfxWebPartComponent implements OnInit {
       });
     });
    return promise;
+  }
+
+  private getlistData2(): Observable<ISPList>{
+    var itms;
+    this.baseSrv.getlistData2().then((data)=>{
+      itms = data;
+    });
+    return itms;
   }
 }
