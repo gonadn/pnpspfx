@@ -13,7 +13,7 @@ export class BaseService implements OnInit {
     ngOnInit() {
     }
 
-    public getlistData() {
+    public getlistData1() {
         var promise = new Promise((resolve, reject) => {
             if (this.listName !== null && this.listName !== undefined) {
                 pnp.sp.web.lists.getByTitle(this.listName).items.get().then((items: any[]) => {
@@ -29,7 +29,7 @@ export class BaseService implements OnInit {
         return promise;
     }
 
-    public getlistData_() {
+    public getlistData2() {
         return pnp.sp.web.lists.getByTitle(this.listName).items.get().then((items: any[]) => {
             if (items !== null && items !== undefined) {
                 return items;

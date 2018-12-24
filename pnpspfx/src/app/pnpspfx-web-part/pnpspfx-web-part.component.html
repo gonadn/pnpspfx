@@ -1,15 +1,23 @@
 <div>
-  <span>{{test}}</span>
-  <ul>
+  <div>
+    <span>Static data</span>
+    <ul>
       <li *ngFor="let topic of topics">{{topic}}</li>
     </ul>
-  <ul>
-    <li *ngFor="let d of lstItems1;">
-        {{d.Title}}
-    </li>
-  </ul>
+  </div>
+
+  <span>Dynamic data listitems 1 and 2</span>
+  <div>
+    <h4>{{test1}}</h4>
+    <ul>
+      <li *ngFor="let d of lstItems1;">
+          {{d.Title}}
+      </li>
+    </ul>
+  </div>
+
   <hr/>
-  <h2>Dynamic data (PnP)  SP List</h2>
+  <h4>{{test2}}</h4>
   <mat-list role="list" >
     <mat-list-item *ngFor="let d of lstItems2;" role="listitem">
        <h1>{{d.Title}}</h1>

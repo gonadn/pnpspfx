@@ -21,32 +21,35 @@ export class PnpspfxWebPartComponent implements OnInit {
   lstItems1: Array<any> = [];
   lstItems2: Array<any> = [];
   //lstItems = [];
-  public test: string = "test string....";
+  public test1: string = "ListItems 1";
+  public test2: string = "ListItems 2";
+
   topics: string[] = ['C','C#','Angular','Angular Element'];
   constructor(private baseSrv:BaseService) { }
 
   ngOnInit() {
+    this.getlistData1();
+    this.getlistData2();
   }
 
-  private getlistData1(){
-    var promise = new Promise((resolve, reject) => {
-      this.baseSrv.getlistData1().then((data:any)=>{
-        if(data!==null&&data!==undefined){
-          resolve(data);
-        }
-        else{
-          reject('error')
-        }
-      });
+ 
+  private getlistData1() {
+    console.log("Get List Data 1");
+    this.baseSrv.getlistData1().then((data: any) => {
+      if (data !== null && data !== undefined) {
+        console.log(data);
+        this.lstItems1 = data;
+      }
     });
-   return promise;
   }
 
-  private getlistData2(): Observable<ISPList>{
+  private getlistData2(): void {
+    console.log("Get List Data 2");
     var itms;
-    this.baseSrv.getlistData2().then((data)=>{
+    this.baseSrv.getlistData2().then((data) => {
       itms = data;
     });
-    return itms;
+    this.lstItems2 = itms;
   }
+
 }
