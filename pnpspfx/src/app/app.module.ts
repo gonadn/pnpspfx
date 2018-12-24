@@ -4,6 +4,7 @@ import { createCustomElement } from '@angular/elements';
 
 import { PnpspfxWebPartComponent } from './pnpspfx-web-part/pnpspfx-web-part.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule, MatListModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatListModule
   ],
   providers: [],
   entryComponents: [PnpspfxWebPartComponent]

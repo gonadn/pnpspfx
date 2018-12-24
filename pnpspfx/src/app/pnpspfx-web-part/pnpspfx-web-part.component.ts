@@ -17,7 +17,11 @@ export interface ISPList{
 })
 export class PnpspfxWebPartComponent implements OnInit {
   @Input() description: string;
-
+  //lstItems: any[] = [];
+  lstItems: Array<any> = [];
+  //lstItems = [];
+  public test: string = "test string....";
+  topics: string[] = ['C','C#','Angular','Angular Element'];
   constructor(private baseSrv:BaseService) { }
 
   ngOnInit() {
